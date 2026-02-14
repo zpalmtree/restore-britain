@@ -1,26 +1,269 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Warm, aged English palette — old manor houses, worn leather, candlelight */
+  --color-forest: #1B4332;
+  --color-forest-light: #2D6A4F;
+  --color-forest-dark: #0B1F15;
+  --color-meadow: #40916C;
+  --color-sage: #74A687;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-cream: #FAF3E0;
+  --color-parchment: #F0E6CE;
+  --color-linen: #E8DCBF;
+  --color-wheat: #D4C5A0;
+
+  --color-burgundy: #6B1D29;
+  --color-burgundy-dark: #4A0F1A;
+  --color-burgundy-light: #8B3A44;
+  --color-rose: #A4626B;
+
+  --color-oak: #4A3728;
+  --color-oak-light: #6B5744;
+  --color-oak-dark: #2E1F14;
+
+  --color-gold: #C5960C;
+  --color-gold-light: #DAA520;
+  --color-gold-pale: #D4A853;
+
+  --color-sky: #87ACBD;
+  --color-stone: #7A7B6A;
+  --color-charcoal: #1E1E1E;
+  --color-ink: #0F0F0F;
+
+  --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Lora", Georgia, "Times New Roman", serif;
+  --font-accent: "Cormorant Garamond", Georgia, serif;
+  --font-mono: "JetBrains Mono", monospace;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(107, 29, 41, 0.2);
+  color: var(--color-charcoal);
+}
+
+/* Warm parchment scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-oak-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border: 1px solid var(--color-oak-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-light);
+}
+
+/* ═══════════════════════════════════════
+   DECORATIVE ELEMENTS
+   ═══════════════════════════════════════ */
+
+/* Heritage line accent */
+.heritage-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-gold) 20%, var(--color-burgundy) 50%, var(--color-gold) 80%, transparent);
+}
+
+/* Ornamental divider with gold diamond */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.ornament::before,
+.ornament::after {
+  content: '';
+  height: 1px;
+  width: 80px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+/* Hedgerow divider */
+.hedge-divider {
+  height: 3px;
+  background:
+    linear-gradient(90deg,
+      transparent 0%,
+      var(--color-oak) 10%,
+      var(--color-gold) 45%,
+      var(--color-burgundy) 50%,
+      var(--color-gold) 55%,
+      var(--color-oak) 90%,
+      transparent 100%
+    );
+}
+
+/* Gold rule between sections */
+.gold-rule {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-pale) 30%, var(--color-gold) 50%, var(--color-gold-pale) 70%, transparent);
+  margin: 2.5rem auto;
+  max-width: 200px;
+}
+
+/* ═══════════════════════════════════════
+   BACKGROUND TEXTURES
+   ═══════════════════════════════════════ */
+
+/* Parchment with subtle paper-like texture */
+.parchment-bg {
+  background-color: var(--color-parchment);
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(197, 150, 12, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(107, 29, 41, 0.04) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.015'/%3E%3C/svg%3E");
+}
+
+/* Deep forest background */
+.forest-bg {
+  background-color: var(--color-forest-dark);
+  background-image:
+    radial-gradient(ellipse at 30% 0%, rgba(27, 67, 50, 0.6) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 100%, rgba(197, 150, 12, 0.06) 0%, transparent 50%);
+}
+
+/* Dark oak background — warm and rich */
+.oak-bg {
+  background-color: var(--color-oak-dark);
+  background-image:
+    radial-gradient(ellipse at 30% 0%, rgba(74, 55, 40, 0.6) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 100%, rgba(197, 150, 12, 0.04) 0%, transparent 50%);
+}
+
+/* Manuscript / speech background — aged paper feel */
+.manuscript-bg {
+  background-color: #F5EDD6;
+  background-image:
+    radial-gradient(ellipse at 10% 20%, rgba(197, 150, 12, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 80%, rgba(107, 29, 41, 0.05) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+}
+
+/* ═══════════════════════════════════════
+   CARDS
+   ═══════════════════════════════════════ */
+
+.heritage-card {
+  background: var(--color-cream);
+  border: 1px solid var(--color-wheat);
+  box-shadow: 0 1px 4px rgba(46, 31, 20, 0.06);
+  transition: all 0.3s ease;
+}
+
+.heritage-card:hover {
+  box-shadow: 0 4px 20px rgba(46, 31, 20, 0.12);
+  border-color: var(--color-gold);
+}
+
+.dark-heritage-card {
+  background: rgba(250, 243, 224, 0.05);
+  border: 1px solid rgba(197, 150, 12, 0.15);
+}
+
+.dark-heritage-card:hover {
+  background: rgba(250, 243, 224, 0.08);
+  border-color: rgba(197, 150, 12, 0.3);
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════
+   TYPOGRAPHY — SPEECH & PROSE
+   ═══════════════════════════════════════ */
+
+/* Decorative initial cap */
+.drop-cap::first-letter {
+  float: left;
+  font-family: var(--font-heading);
+  font-size: 4.5em;
+  line-height: 0.75;
+  padding-right: 12px;
+  padding-top: 6px;
+  color: var(--color-burgundy);
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Speech/prose block for long-form text */
+.prose-speech p {
+  margin-bottom: 1.1em;
+  line-height: 1.9;
+}
+
+.prose-speech p:last-child {
+  margin-bottom: 0;
+}
+
+/* Emphasized speech lines — dramatic, authoritative */
+.speech-emphasis {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--color-burgundy);
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+/* Pull quote — for the most dramatic lines */
+.pull-quote {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--color-burgundy-dark);
+  font-size: 1.5em;
+  line-height: 1.35;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  border-top: 1px solid var(--color-gold-pale);
+  border-bottom: 1px solid var(--color-gold-pale);
+  position: relative;
+}
+
+/* Section label — small caps gold label */
+.section-label {
+  font-family: var(--font-accent);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-gold);
+}
+
+/* ═══════════════════════════════════════
+   HERO TEXTURE PATTERNS
+   ═══════════════════════════════════════ */
+
+/* Subtle heraldic cross-hatch pattern for dark sections */
+.heraldic-pattern {
+  background-image:
+    linear-gradient(45deg, rgba(197, 150, 12, 0.02) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(197, 150, 12, 0.02) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(197, 150, 12, 0.02) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(197, 150, 12, 0.02) 75%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
 }
