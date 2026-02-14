@@ -1,11 +1,13 @@
 import { Metadata } from 'next';
-import DonatePage from './DonatePage';
+import { permanentRedirect } from 'next/navigation';
+
+const LIVE_DONATE_URL = 'https://www.restorebritain.org.uk/donate';
 
 export const metadata: Metadata = {
   title: 'Donate — Restore Britain',
-  description: 'Support the movement to restore Britain.',
+  description: 'Redirecting to the official Restore Britain donation page.',
 };
 
 export default function Page() {
-  return <DonatePage />;
+  permanentRedirect(LIVE_DONATE_URL);
 }
