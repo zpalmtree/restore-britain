@@ -15,11 +15,17 @@ export default function Card({
   dark = false,
   hover = false,
 }: CardProps) {
+  const classes = `p-6 ${dark ? 'dark-heritage-card' : 'heritage-card'} ${className}`;
+
+  if (!hover) {
+    return <div className={classes}>{children}</div>;
+  }
+
   return (
     <motion.div
-      whileHover={hover ? { scale: 1.002 } : undefined}
+      whileHover={{ scale: 1.002 }}
       transition={{ duration: 0.2, ease: 'easeOut' }}
-      className={`p-6 ${dark ? 'dark-heritage-card' : 'heritage-card'} ${className}`}
+      className={classes}
     >
       {children}
     </motion.div>
