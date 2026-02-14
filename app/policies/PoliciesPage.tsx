@@ -10,10 +10,13 @@ import { policyAreas } from '@/lib/data';
 import { ChevronDown, CheckCircle } from 'lucide-react';
 
 export default function PoliciesPage() {
-  const [expanded, setExpanded] = useState<string | null>(null);
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
 
   const toggle = (slug: string) => {
-    setExpanded((prev) => (prev === slug ? null : slug));
+    setExpanded((prev) => ({
+      ...prev,
+      [slug]: !prev[slug],
+    }));
   };
 
   return (
@@ -36,7 +39,7 @@ export default function PoliciesPage() {
 
           <div className="space-y-6">
             {policyAreas.map((policy, i) => {
-              const isOpen = expanded === policy.slug;
+              const isOpen = Boolean(expanded[policy.slug]);
               return (
                 <ScrollReveal key={policy.slug} delay={i * 0.05}>
                   <div id={policy.slug} className="scroll-mt-24">
