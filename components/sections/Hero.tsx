@@ -66,10 +66,20 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.4 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <Button href="/join" variant="primary" size="lg">
+          <Button
+            href="/join"
+            variant="primary"
+            size="lg"
+            className="w-full sm:w-64 justify-center"
+          >
             Join the Movement
           </Button>
-          <Button href="/policies" variant="outline" size="lg">
+          <Button
+            href="/policies"
+            variant="outline"
+            size="lg"
+            className="w-full sm:w-64 justify-center"
+          >
             Our Policies
           </Button>
         </motion.div>
