@@ -92,7 +92,7 @@ export default function DirectDemocracyPage() {
           <ScrollReveal>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-forest-dark mb-6">Have Your Say</h2>
             <p className="text-oak-light font-body text-lg mb-10">Join Restore Britain to have your say. This is an entirely new way of doing politics.</p>
-            <Button href="/join" variant="primary" size="lg">Become a Member</Button>
+            <Button href="https://www.restorebritain.org.uk/join_us" variant="primary" size="lg">Become a Member</Button>
           </ScrollReveal>
         </div>
       </section>

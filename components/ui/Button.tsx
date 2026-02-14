@@ -44,6 +44,14 @@ export default function Button({
   const classes = `inline-flex items-center justify-center font-body font-semibold tracking-[0.06em] ${variants[variant]} ${sizes[size]} ${className}`;
 
   if (href) {
+    const isExternal = href.startsWith('http');
+    if (isExternal) {
+      return (
+        <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+          {children}
+        </a>
+      );
+    }
     return (
       <Link href={href} className={classes}>
         {children}

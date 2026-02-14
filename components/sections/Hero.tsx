@@ -67,7 +67,7 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Button
-            href="/join"
+            href="https://www.restorebritain.org.uk/join_us"
             variant="primary"
             size="lg"
             className="w-full sm:w-64 justify-center"

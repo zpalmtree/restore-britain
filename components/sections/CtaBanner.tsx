@@ -28,10 +28,10 @@ export default function CtaBanner() {
             Back Britain&apos;s parishes, market towns, and civic institutions.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button href="/join" variant="primary" size="lg">
+            <Button href="https://www.restorebritain.org.uk/join_us" variant="primary" size="lg">
               Join Restore Britain
             </Button>
-            <Button href="/donate" variant="outline" size="lg">
+            <Button href="https://www.restorebritain.org.uk/donate" variant="outline" size="lg">
               Support the Cause
             </Button>
           </div>

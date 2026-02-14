@@ -11,7 +11,7 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/policies', label: 'Policies' },
   { href: '/direct-democracy', label: 'Direct Democracy' },
-  { href: '/join', label: 'Join Us' },
+  { href: 'https://www.restorebritain.org.uk/join_us', label: 'Join Us' },
   { href: '/news', label: 'News' },
   { href: '/investigations', label: 'Investigations' },
   { href: '/contact', label: 'Contact' },
@@ -60,21 +60,25 @@ export default function Navbar() {
 
             {/* Desktop Nav */}
             <div className="hidden lg:flex items-center gap-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-cream/90 hover:text-gold-pale px-3 py-2 text-sm font-body tracking-[0.05em] transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isExternal = link.href.startsWith('http');
+                const cls = "text-cream/90 hover:text-gold-pale px-3 py-2 text-sm font-body tracking-[0.05em] transition-colors";
+                return isExternal ? (
+                  <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className={cls}>
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link key={link.href} href={link.href} className={cls}>
+                    {link.label}
+                  </Link>
+                );
+              })}
             </div>
 
             {/* CTA + Mobile Toggle */}
             <div className="flex items-center gap-4">
               <Button
-                href="/donate"
+                href="https://www.restorebritain.org.uk/donate"
                 variant="outline"
                 size="sm"
                 className="hidden sm:inline-flex text-sm"
@@ -123,13 +127,25 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 + i * 0.05 }}
                 >
-                  <Link
-                    href={link.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="text-cream text-xl font-heading hover:text-gold-pale transition-colors"
-                  >
-                    {link.label}
-                  </Link>
+                  {link.href.startsWith('http') ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setMobileOpen(false)}
+                      className="text-cream text-xl font-heading hover:text-gold-pale transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="text-cream text-xl font-heading hover:text-gold-pale transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </motion.div>
               ))}
               <motion.div
@@ -139,7 +155,7 @@ export default function Navbar() {
                 className="mt-4"
               >
                 <Button
-                  href="/donate"
+                  href="https://www.restorebritain.org.uk/donate"
                   variant="outline"
                   size="lg"
                   onClick={() => setMobileOpen(false)}
