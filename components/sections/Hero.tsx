@@ -7,7 +7,7 @@ import Button from '@/components/ui/Button';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-forest-dark">
+    <section className="relative min-h-screen flex items-start md:items-center justify-center pt-[calc(env(safe-area-inset-top)+6.5rem)] md:pt-0 overflow-hidden bg-forest-dark">
       <div className="rural-parallax-base" aria-hidden="true">
         <div className="rural-parallax-layer rural-parallax-fields rural-parallax-layer-fixed" />
         <div className="rural-parallax-layer rural-parallax-church rural-parallax-layer-fixed mix-blend-multiply opacity-45" />
