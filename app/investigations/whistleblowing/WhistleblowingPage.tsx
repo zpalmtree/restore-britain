@@ -107,10 +107,10 @@ export default function WhistleblowingPage() {
                   ))}
                 </div>
                 <div className="mt-8 flex flex-col gap-4">
-                  <Button href="#" variant="primary" size="lg" className="w-full">Submit a Tip (Tier 1)</Button>
-                  <Button href="#" variant="secondary" size="lg" className="w-full flex items-center justify-center gap-2">
+                  <Button href="/contact" variant="primary" size="lg" className="w-full">Submit a Tip (Tier 1)</Button>
+                  <Button href="/contact" variant="secondary" size="lg" className="w-full flex items-center justify-center gap-2">
                     <FileText size={18} />
-                    Download Whistleblower Guide Pack (PDF)
+                    Request Whistleblower Guide Pack
                   </Button>
                 </div>
               </div>

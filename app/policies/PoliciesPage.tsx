@@ -1,15 +1,21 @@
 'use client';
 
-import Link from 'next/link';
+import { useState } from 'react';
 import PageHero from '@/components/sections/PageHero';
 import Card from '@/components/ui/Card';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import { policyAreas } from '@/lib/data';
-import { ArrowRight } from 'lucide-react';
+import { ChevronDown, CheckCircle } from 'lucide-react';
 
 export default function PoliciesPage() {
+  const [expanded, setExpanded] = useState<string | null>(null);
+
+  const toggle = (slug: string) => {
+    setExpanded((prev) => (prev === slug ? null : slug));
+  };
+
   return (
     <>
       <PageHero
@@ -18,37 +24,70 @@ export default function PoliciesPage() {
         breadcrumbs={[{ label: 'Policies', href: '/policies' }]}
       />
 
-      {/* Policy Categories Grid */}
+      {/* Policy Sections */}
       <section className="py-24 parchment-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <SectionHeading
               title="All Policy Areas"
-              subtitle="Our policies cover every aspect of national life."
+              subtitle="Click any policy area to see our proposals."
             />
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {policyAreas.map((policy, i) => (
-              <ScrollReveal key={policy.slug} delay={i * 0.1}>
-                <Link href={policy.href}>
-                  <Card className="h-full group cursor-pointer">
-                    <div className="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center mb-5 group-hover:border-burgundy/50 transition-colors">
-                      <policy.icon
-                        className="text-oak group-hover:text-burgundy transition-colors"
-                        size={24}
-                      />
-                    </div>
-                    <h3 className="font-heading text-xl font-bold italic text-charcoal mb-3 group-hover:text-burgundy transition-colors">
-                      {policy.title}
-                    </h3>
-                    <span className="inline-flex items-center gap-1 text-sm font-body font-semibold text-burgundy group-hover:gap-2 transition-all">
-                      Read More <ArrowRight size={14} />
-                    </span>
-                  </Card>
-                </Link>
-              </ScrollReveal>
-            ))}
+          <div className="space-y-6">
+            {policyAreas.map((policy, i) => {
+              const isOpen = expanded === policy.slug;
+              return (
+                <ScrollReveal key={policy.slug} delay={i * 0.05}>
+                  <div id={policy.slug} className="scroll-mt-24">
+                    <Card hover={!isOpen} className="!p-0 overflow-hidden">
+                      <button
+                        onClick={() => toggle(policy.slug)}
+                        className="w-full flex items-center gap-4 text-left cursor-pointer p-6"
+                      >
+                        <div className="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center shrink-0">
+                          <policy.icon className="text-oak" size={24} />
+                        </div>
+                        <h3 className="font-heading text-xl font-bold italic text-charcoal flex-1">
+                          {policy.title}
+                        </h3>
+                        <span className="text-sm font-body text-stone mr-2 hidden sm:inline">
+                          {policy.policies.length} {policy.policies.length === 1 ? 'policy' : 'policies'}
+                        </span>
+                        <ChevronDown
+                          size={20}
+                          className={`text-oak shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                        />
+                      </button>
+
+                      <div
+                        className={`grid transition-all duration-300 ease-in-out ${
+                          isOpen ? 'grid-rows-[1fr] opacity-100 mt-6' : 'grid-rows-[0fr] opacity-0'
+                        }`}
+                      >
+                        <div className="overflow-hidden">
+                          <div className="border-t border-wheat pt-6 px-6 pb-6 space-y-5">
+                            {policy.policies.map((point) => (
+                              <div key={point.title} className="flex items-start gap-3">
+                                <CheckCircle size={18} className="text-forest mt-1 shrink-0" />
+                                <div>
+                                  <h4 className="font-heading font-bold text-forest-dark text-base">
+                                    {point.title}
+                                  </h4>
+                                  <p className="font-body text-base text-oak-light leading-relaxed">
+                                    {point.description}
+                                  </p>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </Card>
+                  </div>
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </section>

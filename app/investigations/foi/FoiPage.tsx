@@ -110,7 +110,7 @@ export default function FoiPage() {
                 <li>&bull; FOI requests are filed under the Freedom of Information Act 2000 (UK).</li>
                 <li>&bull; Responses belong to the public &mdash; we aim to publish the documents we receive.</li>
               </ul>
-              <Button href="#" variant="primary" size="lg" className="w-full flex items-center justify-center gap-2">
+              <Button href="/contact" variant="primary" size="lg" className="w-full flex items-center justify-center gap-2">
                 <Send size={18} />
                 Submit Your FOI Suggestion
               </Button>

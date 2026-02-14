@@ -1,12 +1,11 @@
 'use client';
 
-import Link from 'next/link';
 import Card from '@/components/ui/Card';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import { newsArticles } from '@/lib/data';
-import { Calendar, ArrowRight } from 'lucide-react';
+import { Calendar, ArrowRight, ExternalLink } from 'lucide-react';
 
 export default function LatestNews() {
   const latest = newsArticles.slice(0, 3);
@@ -24,11 +23,20 @@ export default function LatestNews() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {latest.map((article, i) => (
             <ScrollReveal key={article.id} delay={i * 0.15}>
-              <Link href={article.href}>
+              <a
+                href={article.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full"
+              >
                 <Card className="h-full flex flex-col group cursor-pointer">
                   <h3 className="font-heading text-lg font-bold italic text-charcoal mb-3 group-hover:text-burgundy transition-colors">
                     {article.title}
                   </h3>
+
+                  <p className="font-body text-sm text-oak-light leading-relaxed mb-4 flex-1">
+                    {article.summary}
+                  </p>
 
                   <div className="flex items-center justify-between text-sm text-stone font-body pt-4 border-t border-wheat mt-auto">
                     <div className="flex items-center gap-1.5">
@@ -39,10 +47,13 @@ export default function LatestNews() {
                         year: 'numeric',
                       })}
                     </div>
-                    <span className="italic">{article.author}</span>
+                    <div className="flex items-center gap-2">
+                      <span className="italic">{article.author}</span>
+                      <ExternalLink size={14} className="text-burgundy" />
+                    </div>
                   </div>
                 </Card>
-              </Link>
+              </a>
             </ScrollReveal>
           ))}
         </div>

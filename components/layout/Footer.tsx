@@ -17,7 +17,7 @@ const footerLinks = {
   investigations: [
     { label: 'Whistleblowing', href: '/investigations/whistleblowing' },
     { label: 'FOI Requests', href: '/investigations/foi' },
-    { label: 'Privacy Policy', href: '#' },
+    { label: 'Privacy Policy', href: '/contact' },
   ],
 };
 
