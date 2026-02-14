@@ -7,21 +7,18 @@ import Button from '@/components/ui/Button';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-oak-dark">
-      {/* Base gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-ink via-oak-dark to-oak-dark" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-forest-dark">
+      <div className="rural-parallax-base" aria-hidden="true">
+        <div className="rural-parallax-layer rural-parallax-fields rural-parallax-layer-fixed" />
+        <div className="rural-parallax-layer rural-parallax-church rural-parallax-layer-fixed mix-blend-multiply opacity-45" />
+        <div className="absolute inset-0 rural-ink-overlay" />
+        <div className="absolute inset-0 heraldic-pattern opacity-45" />
+        <div className="absolute inset-0 rural-vignette" />
+      </div>
 
-      {/* Heraldic texture overlay */}
-      <div className="absolute inset-0 heraldic-pattern opacity-90" />
-
-      {/* Corner vignette */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_44%,rgba(20,25,23,0.5)_100%)]" />
-
-      {/* Top gold line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/35 to-transparent" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -49,7 +46,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.9 }}
-          className="font-accent text-xl sm:text-2xl md:text-3xl text-gold-pale/90 leading-relaxed mb-4 tracking-[0.06em]"
+          className="font-accent text-xl sm:text-2xl md:text-3xl text-cream/92 leading-relaxed mb-4 tracking-[0.04em]"
         >
           A serious programme of national restoration
         </motion.p>
@@ -57,7 +54,7 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1.2, delay: 1.2 }}
+          transition={{ duration: 1.2, delay: 1.1 }}
           className="font-body text-cream/78 text-sm sm:text-base mb-12 max-w-xl mx-auto"
         >
           Because Britain is our country, it is our people, it is our home.
@@ -66,7 +63,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.5 }}
+          transition={{ duration: 0.8, delay: 1.4 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Button href="/join" variant="primary" size="lg">
@@ -90,7 +87,7 @@ export default function Hero() {
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2.5, repeat: Infinity }}
         >
-          <ChevronDown className="text-gold/50" size={24} />
+          <ChevronDown className="text-gold/65" size={24} />
         </motion.div>
       </motion.div>
     </section>

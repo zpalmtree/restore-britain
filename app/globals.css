@@ -1,35 +1,35 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Parish & Hedgerow palette — brass, soil, moss, and old paper */
-  --color-forest: #3E5A43;
-  --color-forest-light: #56775A;
-  --color-forest-dark: #223428;
-  --color-meadow: #6B8B5C;
-  --color-sage: #8FA581;
+  /* Parish & hedgerow palette */
+  --color-forest: #2E6240;
+  --color-forest-light: #4F7D5D;
+  --color-forest-dark: #163827;
+  --color-meadow: #7A9C69;
+  --color-sage: #A2B996;
 
-  --color-cream: #F3E9D2;
-  --color-parchment: #EADFC6;
-  --color-linen: #DFD2B4;
-  --color-wheat: #C8B694;
+  --color-cream: #F5EEDB;
+  --color-parchment: #ECE2C8;
+  --color-linen: #DED3B2;
+  --color-wheat: #CDBA8D;
 
-  --color-burgundy: #6A2A2A;
-  --color-burgundy-dark: #4D1F1F;
-  --color-burgundy-light: #864141;
-  --color-rose: #A07163;
+  --color-burgundy: #7C3340;
+  --color-burgundy-dark: #5D2430;
+  --color-burgundy-light: #965160;
+  --color-rose: #B28778;
 
-  --color-oak: #4A3728;
-  --color-oak-light: #64503F;
-  --color-oak-dark: #2A211A;
+  --color-oak: #4A3A2B;
+  --color-oak-light: #695845;
+  --color-oak-dark: #211A13;
 
-  --color-gold: #B58A3C;
-  --color-gold-light: #C59C4C;
-  --color-gold-pale: #D3B06A;
+  --color-gold: #B58F45;
+  --color-gold-light: #CAA35A;
+  --color-gold-pale: #DCC189;
 
-  --color-sky: #8DA6AC;
-  --color-stone: #6D6A5D;
-  --color-charcoal: #1F2320;
-  --color-ink: #141917;
+  --color-sky: #8EA9AB;
+  --color-stone: #6D6C60;
+  --color-charcoal: #1D241F;
+  --color-ink: #111A15;
 
   --font-heading: "Bitter", Georgia, "Times New Roman", serif;
   --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
@@ -38,7 +38,11 @@
 }
 
 body {
-  background: var(--color-cream);
+  background-color: var(--color-cream);
+  background-image:
+    radial-gradient(ellipse at 14% 0%, rgba(79, 125, 93, 0.08) 0%, transparent 42%),
+    radial-gradient(ellipse at 86% 100%, rgba(181, 143, 69, 0.08) 0%, transparent 45%),
+    url("data:image/svg+xml,%3Csvg width='96' height='96' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.015'/%3E%3C/svg%3E");
   color: var(--color-charcoal);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
@@ -50,11 +54,10 @@ html {
 }
 
 ::selection {
-  background: rgba(106, 42, 42, 0.2);
+  background: rgba(46, 98, 64, 0.2);
   color: var(--color-charcoal);
 }
 
-/* Warm parchment scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -64,25 +67,27 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-gold);
+  background: var(--color-forest-light);
   border: 1px solid var(--color-oak-dark);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-gold-light);
+  background: var(--color-meadow);
 }
 
-/* ═══════════════════════════════════════
-   DECORATIVE ELEMENTS
-   ═══════════════════════════════════════ */
-
-/* Heritage line accent */
+/* Decorative elements */
 .heritage-line {
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--color-gold) 18%, var(--color-oak-light) 50%, var(--color-gold) 82%, transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gold) 16%,
+    var(--color-forest-light) 50%,
+    var(--color-gold) 84%,
+    transparent
+  );
 }
 
-/* Ornamental divider with gold diamond */
 .ornament {
   display: flex;
   align-items: center;
@@ -92,109 +97,168 @@ html {
 
 .ornament::before,
 .ornament::after {
-  content: '';
+  content: "";
   height: 1px;
   width: 80px;
   background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
 }
 
-/* Hedgerow divider */
 .hedge-divider {
   height: 2px;
-  background:
-    linear-gradient(90deg,
-      transparent 0%,
-      var(--color-oak) 14%,
-      var(--color-gold) 49%,
-      var(--color-oak) 86%,
-      transparent 100%
-    );
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(79, 125, 93, 0.7) 16%,
+    rgba(181, 143, 69, 0.95) 50%,
+    rgba(79, 125, 93, 0.7) 84%,
+    transparent 100%
+  );
 }
 
-/* Gold rule between sections */
 .gold-rule {
   border: none;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-gold-pale) 32%, var(--color-gold) 50%, var(--color-gold-pale) 68%, transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gold-pale) 32%,
+    var(--color-gold) 50%,
+    var(--color-gold-pale) 68%,
+    transparent
+  );
   margin: 2.5rem auto;
-  max-width: 200px;
+  max-width: 220px;
 }
 
-/* ═══════════════════════════════════════
-   BACKGROUND TEXTURES
-   ═══════════════════════════════════════ */
-
-/* Parchment with subtle paper-like texture */
+/* Theme backgrounds */
 .parchment-bg {
   background-color: var(--color-parchment);
   background-image:
-    radial-gradient(ellipse at 18% 45%, rgba(181, 138, 60, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 82% 55%, rgba(62, 90, 67, 0.04) 0%, transparent 50%),
-    url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.015'/%3E%3C/svg%3E");
+    radial-gradient(ellipse at 18% 22%, rgba(79, 125, 93, 0.1) 0%, transparent 46%),
+    radial-gradient(ellipse at 84% 80%, rgba(181, 143, 69, 0.08) 0%, transparent 52%),
+    url("data:image/svg+xml,%3Csvg width='96' height='96' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.022'/%3E%3C/svg%3E");
 }
 
-/* Deep forest background */
 .forest-bg {
   background-color: var(--color-forest-dark);
   background-image:
-    linear-gradient(180deg, rgba(34, 52, 40, 0.97) 0%, rgba(42, 33, 26, 0.97) 100%),
-    radial-gradient(ellipse at 25% 0%, rgba(107, 139, 92, 0.2) 0%, transparent 60%);
+    linear-gradient(170deg, rgba(13, 34, 24, 0.9) 0%, rgba(12, 30, 21, 0.9) 52%, rgba(11, 26, 18, 0.94) 100%),
+    url('/images/theme/parallax-church.webp');
+  background-position: center;
+  background-size: cover;
 }
 
-/* Dark oak background — warm and rich */
 .oak-bg {
-  background-color: var(--color-oak-dark);
+  background-color: #153526;
   background-image:
-    linear-gradient(180deg, rgba(42, 33, 26, 0.98) 0%, rgba(34, 52, 40, 0.96) 100%),
-    radial-gradient(ellipse at 70% 0%, rgba(181, 138, 60, 0.08) 0%, transparent 56%);
+    linear-gradient(165deg, rgba(16, 36, 26, 0.9) 0%, rgba(14, 30, 22, 0.88) 55%, rgba(12, 24, 18, 0.94) 100%),
+    url('/images/theme/parallax-maypole.webp');
+  background-position: center;
+  background-size: cover;
 }
 
-/* Manuscript / speech background — aged paper feel */
+@media (min-width: 1024px) {
+  .forest-bg,
+  .oak-bg {
+    background-attachment: fixed;
+  }
+}
+
 .manuscript-bg {
-  background-color: #EEE2C9;
+  background-color: var(--color-parchment);
   background-image:
-    radial-gradient(ellipse at 10% 20%, rgba(181, 138, 60, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 90% 80%, rgba(62, 90, 67, 0.05) 0%, transparent 50%),
-    url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+    radial-gradient(ellipse at 10% 15%, rgba(79, 125, 93, 0.08) 0%, transparent 48%),
+    radial-gradient(ellipse at 90% 85%, rgba(181, 143, 69, 0.07) 0%, transparent 48%),
+    url("data:image/svg+xml,%3Csvg width='96' height='96' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.026'/%3E%3C/svg%3E");
 }
 
-/* ═══════════════════════════════════════
-   CARDS
-   ═══════════════════════════════════════ */
+/* Reusable parallax layers */
+.rural-parallax-base {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  isolation: isolate;
+}
 
+.rural-parallax-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.rural-parallax-layer-fixed {
+  background-attachment: scroll;
+}
+
+@media (min-width: 1024px) {
+  .rural-parallax-layer-fixed {
+    background-attachment: fixed;
+  }
+}
+
+.rural-parallax-fields {
+  background-image: url('/images/theme/parallax-hedgerows.webp');
+}
+
+.rural-parallax-maypole {
+  background-image: url('/images/theme/parallax-maypole.webp');
+}
+
+.rural-parallax-church {
+  background-image: url('/images/theme/parallax-church.webp');
+}
+
+.rural-ink-overlay {
+  background: linear-gradient(180deg, rgba(8, 19, 14, 0.86) 0%, rgba(8, 19, 14, 0.87) 100%);
+}
+
+.rural-band-overlay {
+  background: linear-gradient(180deg, rgba(9, 24, 17, 0.82) 0%, rgba(9, 22, 16, 0.88) 100%);
+}
+
+.rural-vignette {
+  background: radial-gradient(ellipse at center, transparent 42%, rgba(8, 19, 14, 0.45) 100%);
+}
+
+.heraldic-pattern {
+  background-image:
+    repeating-linear-gradient(45deg, rgba(212, 193, 140, 0.06) 0px, rgba(212, 193, 140, 0.06) 1px, transparent 1px, transparent 9px),
+    repeating-linear-gradient(-45deg, rgba(212, 193, 140, 0.045) 0px, rgba(212, 193, 140, 0.045) 1px, transparent 1px, transparent 11px);
+}
+
+/* Cards */
 .heritage-card {
-  background: var(--color-cream);
+  background: rgba(244, 238, 219, 0.96);
   border: 1px solid var(--color-wheat);
-  box-shadow: 0 1px 3px rgba(31, 35, 32, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: 0 1px 4px rgba(29, 36, 31, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.35);
   transition: all 0.3s ease;
 }
 
 .heritage-card:hover {
-  box-shadow: 0 3px 12px rgba(31, 35, 32, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 18px rgba(29, 36, 31, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   border-color: var(--color-gold);
 }
 
 .dark-heritage-card {
-  background: rgba(243, 233, 210, 0.06);
-  border: 1px solid rgba(181, 138, 60, 0.22);
+  background: rgba(240, 230, 200, 0.07);
+  border: 1px solid rgba(181, 143, 69, 0.24);
 }
 
 .dark-heritage-card:hover {
-  background: rgba(243, 233, 210, 0.09);
-  border-color: rgba(181, 138, 60, 0.36);
+  background: rgba(240, 230, 200, 0.11);
+  border-color: rgba(181, 143, 69, 0.4);
 }
 
-/* Focus styles */
 *:focus-visible {
   outline: 2px solid var(--color-gold);
   outline-offset: 2px;
 }
 
-/* ═══════════════════════════════════════
-   TYPOGRAPHY — SPEECH & PROSE
-   ═══════════════════════════════════════ */
-
-/* Decorative initial cap */
+/* Typography */
 .drop-cap::first-letter {
   float: left;
   font-family: var(--font-heading);
@@ -202,11 +266,10 @@ html {
   line-height: 0.75;
   padding-right: 12px;
   padding-top: 6px;
-  color: var(--color-oak-light);
+  color: var(--color-forest-light);
   font-weight: 700;
 }
 
-/* Speech/prose block for long-form text */
 .prose-speech p {
   margin-bottom: 1.1em;
   line-height: 1.9;
@@ -216,7 +279,6 @@ html {
   margin-bottom: 0;
 }
 
-/* Emphasized speech lines — dramatic, authoritative */
 .speech-emphasis {
   font-family: var(--font-heading);
   font-weight: 700;
@@ -225,7 +287,6 @@ html {
   line-height: 1.5;
 }
 
-/* Pull quote — for the most dramatic lines */
 .pull-quote {
   font-family: var(--font-heading);
   font-weight: 700;
@@ -240,26 +301,10 @@ html {
   position: relative;
 }
 
-/* Section label — small caps gold label */
 .section-label {
   font-family: var(--font-accent);
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--color-gold);
-}
-
-/* ═══════════════════════════════════════
-   HERO TEXTURE PATTERNS
-   ═══════════════════════════════════════ */
-
-/* Subtle heraldic cross-hatch pattern for dark sections */
-.heraldic-pattern {
-  background-image:
-    linear-gradient(45deg, rgba(181, 138, 60, 0.018) 25%, transparent 25%),
-    linear-gradient(-45deg, rgba(181, 138, 60, 0.018) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, rgba(181, 138, 60, 0.018) 75%),
-    linear-gradient(-45deg, transparent 75%, rgba(181, 138, 60, 0.018) 75%);
-  background-size: 48px 48px;
-  background-position: 0 0, 0 24px, 24px -24px, -24px 0px;
 }

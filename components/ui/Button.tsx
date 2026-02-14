@@ -17,13 +17,13 @@ interface ButtonProps {
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    'bg-burgundy text-cream hover:bg-burgundy-dark border border-burgundy-dark shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] transition-colors duration-200',
+    'bg-forest text-cream hover:bg-forest-light border border-forest-dark shadow-[inset_0_1px_0_rgba(255,255,255,0.14)] transition-colors duration-200',
   secondary:
-    'bg-forest text-cream hover:bg-forest-dark border border-forest-dark shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] transition-colors duration-200',
+    'bg-burgundy text-cream hover:bg-burgundy-dark border border-burgundy-dark shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] transition-colors duration-200',
   outline:
-    'border border-gold text-gold hover:bg-gold/15 hover:text-gold-light transition-colors duration-200',
+    'border border-gold/85 text-gold-pale hover:bg-gold/20 hover:text-cream transition-colors duration-200',
   ghost:
-    'text-burgundy hover:text-burgundy-dark transition-colors duration-200',
+    'text-forest hover:text-forest-dark transition-colors duration-200',
 };
 
 const sizes: Record<ButtonSize, string> = {

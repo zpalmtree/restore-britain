@@ -6,9 +6,12 @@ import { stats } from '@/lib/data';
 
 export default function StatsBar() {
   return (
-    <section className="relative oak-bg py-24 overflow-hidden">
-      {/* Heraldic pattern overlay */}
-      <div className="absolute inset-0 heraldic-pattern" />
+    <section className="relative py-24 overflow-hidden bg-forest-dark">
+      <div className="rural-parallax-base" aria-hidden="true">
+        <div className="rural-parallax-layer rural-parallax-church rural-parallax-layer-fixed opacity-65" />
+        <div className="absolute inset-0 rural-band-overlay" />
+        <div className="absolute inset-0 heraldic-pattern opacity-55" />
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

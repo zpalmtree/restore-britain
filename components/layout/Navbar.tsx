@@ -40,8 +40,8 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-oak-dark/98 shadow-lg shadow-black/10 border-b border-gold/25'
-            : 'bg-oak-dark/90 border-b border-gold/10'
+            ? 'bg-forest-dark/88 backdrop-blur-md shadow-lg shadow-black/20 border-b border-gold/28'
+            : 'bg-forest-dark/72 backdrop-blur-sm border-b border-gold/18'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,7 +64,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-cream/90 hover:text-gold px-3 py-2 text-sm font-body tracking-[0.05em] transition-colors"
+                  className="text-cream/90 hover:text-gold-pale px-3 py-2 text-sm font-body tracking-[0.05em] transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -83,7 +83,7 @@ export default function Navbar() {
               </Button>
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
-                className="lg:hidden text-cream p-2 hover:text-gold transition-colors"
+                className="lg:hidden text-cream p-2 hover:text-gold-pale transition-colors"
                 aria-label="Toggle menu"
               >
                 {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -100,7 +100,7 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-oak-dark/98 lg:hidden"
+            className="fixed inset-0 z-40 bg-forest-dark/96 backdrop-blur-md lg:hidden"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -126,7 +126,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="text-cream text-xl font-heading hover:text-gold transition-colors"
+                    className="text-cream text-xl font-heading hover:text-gold-pale transition-colors"
                   >
                     {link.label}
                   </Link>
