@@ -52,7 +52,7 @@ export default function DirectDemocracyPage() {
                     <step.icon className="text-gold" size={28} />
                   </div>
                   <span className="inline-block px-3 py-1 text-xs font-body font-bold uppercase tracking-wider text-gold bg-gold/10 border border-gold/20 mb-4">Step {step.step}</span>
-                  <h3 className="font-heading text-2xl font-bold italic text-forest-dark mb-3">{step.title}</h3>
+                  <h3 className="font-heading text-2xl font-bold text-forest-dark mb-3">{step.title}</h3>
                   <p className="text-oak-light font-body leading-relaxed max-w-xs mx-auto">{step.description}</p>
                 </div>
               </ScrollReveal>
@@ -90,7 +90,7 @@ export default function DirectDemocracyPage() {
       <section className="relative py-24 overflow-hidden parchment-bg">
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold italic text-forest-dark mb-6">Have Your Say</h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-forest-dark mb-6">Have Your Say</h2>
             <p className="text-oak-light font-body text-lg mb-10">Join Restore Britain to have your say. This is an entirely new way of doing politics.</p>
             <Button href="/join" variant="primary" size="lg">Become a Member</Button>
           </ScrollReveal>

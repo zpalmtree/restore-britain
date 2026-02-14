@@ -30,7 +30,7 @@ export default function DonatePage() {
                     <Heart className="text-burgundy" size={22} />
                   </div>
                   <div>
-                    <h3 className="font-heading text-2xl font-bold italic text-forest-dark">Make a Donation</h3>
+                    <h3 className="font-heading text-2xl font-bold text-forest-dark">Make a Donation</h3>
                     <p className="text-oak-light font-body text-sm">Select an amount or enter your own.</p>
                   </div>
                 </div>
@@ -111,7 +111,7 @@ export default function DonatePage() {
             <div>
               <ScrollReveal direction="right">
                 <span className="text-gold font-accent text-lg italic">Legal Information</span>
-                <h2 className="font-heading text-3xl font-bold italic text-forest-dark mt-2 mb-4">Donation Rules</h2>
+                <h2 className="font-heading text-3xl font-bold text-forest-dark mt-2 mb-4">Donation Rules</h2>
                 <div className="heritage-line w-16 mb-10" />
               </ScrollReveal>
 
@@ -155,7 +155,7 @@ export default function DonatePage() {
                         <Crown className="text-gold" size={22} />
                       </div>
                       <div>
-                        <h3 className="font-heading text-lg font-bold italic text-cream mb-2">The Cromwell Club</h3>
+                        <h3 className="font-heading text-lg font-bold text-cream mb-2">The Cromwell Club</h3>
                         <p className="text-cream/60 font-body text-sm leading-relaxed">
                           For an annual donation of &pound;2,500 or over, join the exclusive Cromwell Club.
                         </p>

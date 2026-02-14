@@ -17,7 +17,7 @@ const footerLinks = {
   investigations: [
     { label: 'Whistleblowing', href: '/investigations/whistleblowing' },
     { label: 'FOI Requests', href: '/investigations/foi' },
-    { label: 'Privacy Policy', href: '/contact' },
+    { label: 'Privacy Policy', href: '/privacy' },
   ],
 };
 
@@ -40,7 +40,7 @@ export default function Footer() {
                 className="h-12 w-auto invert"
               />
             </div>
-            <p className="text-cream/50 text-sm font-body leading-relaxed mb-6">
+            <p className="text-cream/72 text-sm font-body leading-relaxed mb-6">
               A political party for those who believe that our nation has been hollowed out by weak leadership, broken institutions, and a political class that no longer serves the people.
             </p>
             <div className="flex flex-col gap-3 text-sm font-body">
@@ -67,7 +67,7 @@ export default function Footer() {
 
           {/* About Column */}
           <div>
-            <h3 className="text-cream font-heading font-semibold italic text-lg mb-6">
+            <h3 className="text-cream font-heading font-semibold text-lg mb-6">
               About
             </h3>
             <ul className="space-y-3 font-body">
@@ -86,7 +86,7 @@ export default function Footer() {
 
           {/* Get Involved Column */}
           <div>
-            <h3 className="text-cream font-heading font-semibold italic text-lg mb-6">
+            <h3 className="text-cream font-heading font-semibold text-lg mb-6">
               Get Involved
             </h3>
             <ul className="space-y-3 font-body">
@@ -105,7 +105,7 @@ export default function Footer() {
 
           {/* Investigations Column */}
           <div>
-            <h3 className="text-cream font-heading font-semibold italic text-lg mb-6">
+            <h3 className="text-cream font-heading font-semibold text-lg mb-6">
               Investigations
             </h3>
             <ul className="space-y-3 font-body">
@@ -122,7 +122,7 @@ export default function Footer() {
             </ul>
 
             <div className="mt-8">
-              <h3 className="text-cream font-heading font-semibold italic text-lg mb-4">
+              <h3 className="text-cream font-heading font-semibold text-lg mb-4">
                 Follow Us
               </h3>
               <a
@@ -140,11 +140,11 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-oak/30 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-cream/40 text-sm font-body">
+          <p className="text-cream/70 text-sm font-body">
             &copy; {new Date().getFullYear()} Restore Britain. All rights
             reserved.
           </p>
-          <p className="text-cream/30 text-xs font-body italic">
+          <p className="text-cream/60 text-xs font-body">
             Because Britain is our country, it is our people, it is our home.
           </p>
         </div>

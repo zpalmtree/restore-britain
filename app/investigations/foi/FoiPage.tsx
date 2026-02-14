@@ -53,7 +53,7 @@ export default function FoiPage() {
               <Card hover={false}>
                 <div className="flex items-center gap-3 mb-6">
                   <FileSearch className="text-gold" size={24} />
-                  <h3 className="font-heading text-xl font-bold italic text-forest-dark">How It Works</h3>
+                  <h3 className="font-heading text-xl font-bold text-forest-dark">How It Works</h3>
                 </div>
                 <ol className="space-y-4">
                   {howItWorks.map((step, i) => (
@@ -70,7 +70,7 @@ export default function FoiPage() {
               <Card hover={false}>
                 <div className="flex items-center gap-3 mb-6">
                   <CheckCircle className="text-gold" size={24} />
-                  <h3 className="font-heading text-xl font-bold italic text-forest-dark">What Makes a Good FOI Request?</h3>
+                  <h3 className="font-heading text-xl font-bold text-forest-dark">What Makes a Good FOI Request?</h3>
                 </div>
                 <p className="text-charcoal font-body text-sm leading-relaxed mb-4">When submitting a suggestion, keep it:</p>
                 <ul className="space-y-3 mb-6">
@@ -101,7 +101,7 @@ export default function FoiPage() {
             <Card hover={false} className="p-8 md:p-10">
               <div className="flex items-center gap-3 mb-4">
                 <AlertCircle className="text-gold" size={22} />
-                <h3 className="font-heading text-xl font-bold italic text-forest-dark">Important Notes</h3>
+                <h3 className="font-heading text-xl font-bold text-forest-dark">Important Notes</h3>
               </div>
               <ul className="space-y-3 text-oak-light font-body text-sm leading-relaxed mb-8">
                 <li>&bull; Submitting an FOI suggestion does not guarantee we will file it.</li>

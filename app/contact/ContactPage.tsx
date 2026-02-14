@@ -26,7 +26,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <ScrollReveal>
               <Card className="p-8 md:p-10" hover={false}>
-                <h2 className="font-heading text-2xl font-bold italic text-forest-dark mb-2">Send a Message</h2>
+                <h2 className="font-heading text-2xl font-bold text-forest-dark mb-2">Send a Message</h2>
                 <p className="text-oak-light font-body text-sm mb-8">Fill out the form below and we will get back to you.</p>
                 <form className="space-y-5">
                   <div>
@@ -70,7 +70,7 @@ export default function ContactPage() {
             <div>
               <ScrollReveal direction="right">
                 <span className="text-gold font-accent text-lg italic">Reach Us</span>
-                <h2 className="font-heading text-3xl font-bold italic text-forest-dark mt-2 mb-4">Get in Touch</h2>
+                <h2 className="font-heading text-3xl font-bold text-forest-dark mt-2 mb-4">Get in Touch</h2>
                 <div className="heritage-line w-16 mb-10" />
               </ScrollReveal>
 
@@ -82,7 +82,7 @@ export default function ContactPage() {
                         <item.icon className="text-gold" size={20} />
                       </div>
                       <div>
-                        <h3 className="font-heading font-bold italic text-forest-dark mb-1">{item.title}</h3>
+                        <h3 className="font-heading font-bold text-forest-dark mb-1">{item.title}</h3>
                         {item.href ? (
                           <a href={item.href} className="text-burgundy font-body font-semibold text-sm hover:underline">{item.detail}</a>
                         ) : (

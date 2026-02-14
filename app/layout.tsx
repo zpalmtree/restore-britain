@@ -1,26 +1,33 @@
 import type { Metadata } from 'next';
-import { Playfair_Display, Lora, Cormorant_Garamond, JetBrains_Mono } from 'next/font/google';
+import {
+  Bitter,
+  Source_Serif_4,
+  Alegreya_SC,
+  JetBrains_Mono,
+} from 'next/font/google';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import './globals.css';
 
-const playfair = Playfair_Display({
+const bitter = Bitter({
   variable: '--font-heading',
   subsets: ['latin'],
   display: 'swap',
+  weight: ['500', '600', '700', '800'],
 });
 
-const lora = Lora({
+const sourceSerif = Source_Serif_4({
   variable: '--font-body',
   subsets: ['latin'],
   display: 'swap',
+  weight: ['400', '500', '600', '700'],
 });
 
-const cormorant = Cormorant_Garamond({
+const alegreyaSc = Alegreya_SC({
   variable: '--font-accent',
   subsets: ['latin'],
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '700'],
 });
 
 const jetbrains = JetBrains_Mono({
@@ -43,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${lora.variable} ${cormorant.variable} ${jetbrains.variable}`}
+        className={`${bitter.variable} ${sourceSerif.variable} ${alegreyaSc.variable} ${jetbrains.variable}`}
       >
         <Navbar />
         <main>{children}</main>

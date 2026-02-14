@@ -32,7 +32,7 @@ export default function MissionStatement() {
           <ScrollReveal direction="right">
             <div>
               <span className="text-gold font-accent text-lg italic">An Announcement from Rupert Lowe</span>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold italic text-forest-dark mt-2 mb-6">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-forest-dark mt-2 mb-6">
                 Why Restore Britain
               </h2>
               <div className="heritage-line w-16 mb-8" />
@@ -50,7 +50,7 @@ export default function MissionStatement() {
               </div>
 
               <div className="mt-8 pt-6 border-t border-wheat">
-                <p className="font-heading text-lg font-bold italic text-forest-dark">
+                <p className="font-heading text-lg font-bold text-forest-dark">
                   Rupert Lowe
                 </p>
                 <p className="text-oak-light font-body text-sm">Member of Parliament for Great Yarmouth</p>

@@ -46,7 +46,7 @@ export default function WhistleblowingPage() {
             <div>
               <ScrollReveal>
                 <span className="text-gold font-accent text-lg italic">Speak Truth</span>
-                <h2 className="font-heading text-3xl font-bold italic text-forest-dark mt-2 mb-6">Your Protection Comes First</h2>
+                <h2 className="font-heading text-3xl font-bold text-forest-dark mt-2 mb-6">Your Protection Comes First</h2>
                 <div className="heritage-line w-16 mb-8" />
                 <div className="space-y-4 text-charcoal font-body leading-relaxed mb-10">
                   <p>At Restore Britain, we believe the public has a right to know the truth, and we take the safety of those who come forward very seriously.</p>
@@ -63,7 +63,7 @@ export default function WhistleblowingPage() {
                   <div className="relative z-10">
                     <div className="flex items-center gap-3 mb-3">
                       <AlertTriangle className="text-gold" size={20} />
-                      <h3 className="font-heading font-bold italic text-cream">Legal Notice</h3>
+                      <h3 className="font-heading font-bold text-cream">Legal Notice</h3>
                     </div>
                     <div className="space-y-3 text-cream/60 font-body text-sm leading-relaxed">
                       <p><strong className="text-cream/80">Official Secrets Act 1989:</strong> If you are bound by the Act, disclosing certain categories of information is a criminal offence. There is no public interest defence.</p>
@@ -78,7 +78,7 @@ export default function WhistleblowingPage() {
                 <div className="p-5 heritage-card">
                   <div className="flex items-center gap-3 mb-3">
                     <Lock className="text-gold" size={18} />
-                    <h3 className="font-heading font-bold italic text-forest-dark">Data Protection</h3>
+                    <h3 className="font-heading font-bold text-forest-dark">Data Protection</h3>
                   </div>
                   <p className="text-oak-light font-body text-sm leading-relaxed">
                     We comply with UK GDPR and the Data Protection Act 2018, applying the journalism exemption where appropriate. Your personal data is only processed where necessary for journalism in the public interest. We minimise what we collect, keep it encrypted, and delete it when no longer required.
@@ -99,7 +99,7 @@ export default function WhistleblowingPage() {
                         </div>
                         <div>
                           <span className="inline-block px-3 py-1 text-xs font-body font-semibold uppercase tracking-wider text-gold bg-gold/10 border border-gold/20 mb-2">{tier.level} &mdash; {tier.subtitle}</span>
-                          <h3 className="font-heading font-bold italic text-forest-dark mb-2">{tier.title}</h3>
+                          <h3 className="font-heading font-bold text-forest-dark mb-2">{tier.title}</h3>
                           <p className="text-oak-light font-body text-sm leading-relaxed">{tier.description}</p>
                         </div>
                       </div>

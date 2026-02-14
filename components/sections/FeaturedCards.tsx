@@ -17,7 +17,7 @@ export default function FeaturedCards() {
                 <div className="w-14 h-14 rounded-full border border-gold/30 bg-forest-dark/5 flex items-center justify-center mb-5">
                   <card.icon className="text-burgundy" size={26} />
                 </div>
-                <h3 className="text-forest-dark font-heading text-xl font-bold italic mb-3">
+                <h3 className="text-forest-dark font-heading text-xl font-bold mb-3">
                   {card.title}
                 </h3>
                 <p className="text-oak-light font-body text-sm leading-relaxed mb-6 flex-1">

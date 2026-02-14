@@ -1,39 +1,39 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Warm, aged English palette — old manor houses, worn leather, candlelight */
-  --color-forest: #1B4332;
-  --color-forest-light: #2D6A4F;
-  --color-forest-dark: #0B1F15;
-  --color-meadow: #40916C;
-  --color-sage: #74A687;
+  /* Parish & Hedgerow palette — brass, soil, moss, and old paper */
+  --color-forest: #3E5A43;
+  --color-forest-light: #56775A;
+  --color-forest-dark: #223428;
+  --color-meadow: #6B8B5C;
+  --color-sage: #8FA581;
 
-  --color-cream: #FAF3E0;
-  --color-parchment: #F0E6CE;
-  --color-linen: #E8DCBF;
-  --color-wheat: #D4C5A0;
+  --color-cream: #F3E9D2;
+  --color-parchment: #EADFC6;
+  --color-linen: #DFD2B4;
+  --color-wheat: #C8B694;
 
-  --color-burgundy: #6B1D29;
-  --color-burgundy-dark: #4A0F1A;
-  --color-burgundy-light: #8B3A44;
-  --color-rose: #A4626B;
+  --color-burgundy: #6A2A2A;
+  --color-burgundy-dark: #4D1F1F;
+  --color-burgundy-light: #864141;
+  --color-rose: #A07163;
 
   --color-oak: #4A3728;
-  --color-oak-light: #6B5744;
-  --color-oak-dark: #2E1F14;
+  --color-oak-light: #64503F;
+  --color-oak-dark: #2A211A;
 
-  --color-gold: #C5960C;
-  --color-gold-light: #DAA520;
-  --color-gold-pale: #D4A853;
+  --color-gold: #B58A3C;
+  --color-gold-light: #C59C4C;
+  --color-gold-pale: #D3B06A;
 
-  --color-sky: #87ACBD;
-  --color-stone: #7A7B6A;
-  --color-charcoal: #1E1E1E;
-  --color-ink: #0F0F0F;
+  --color-sky: #8DA6AC;
+  --color-stone: #6D6A5D;
+  --color-charcoal: #1F2320;
+  --color-ink: #141917;
 
-  --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
-  --font-body: "Lora", Georgia, "Times New Roman", serif;
-  --font-accent: "Cormorant Garamond", Georgia, serif;
+  --font-heading: "Bitter", Georgia, "Times New Roman", serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-accent: "Alegreya SC", Georgia, serif;
   --font-mono: "JetBrains Mono", monospace;
 }
 
@@ -42,6 +42,7 @@ body {
   color: var(--color-charcoal);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 html {
@@ -49,7 +50,7 @@ html {
 }
 
 ::selection {
-  background: rgba(107, 29, 41, 0.2);
+  background: rgba(106, 42, 42, 0.2);
   color: var(--color-charcoal);
 }
 
@@ -78,7 +79,7 @@ html {
 /* Heritage line accent */
 .heritage-line {
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--color-gold) 20%, var(--color-burgundy) 50%, var(--color-gold) 80%, transparent);
+  background: linear-gradient(90deg, transparent, var(--color-gold) 18%, var(--color-oak-light) 50%, var(--color-gold) 82%, transparent);
 }
 
 /* Ornamental divider with gold diamond */
@@ -99,15 +100,13 @@ html {
 
 /* Hedgerow divider */
 .hedge-divider {
-  height: 3px;
+  height: 2px;
   background:
     linear-gradient(90deg,
       transparent 0%,
-      var(--color-oak) 10%,
-      var(--color-gold) 45%,
-      var(--color-burgundy) 50%,
-      var(--color-gold) 55%,
-      var(--color-oak) 90%,
+      var(--color-oak) 14%,
+      var(--color-gold) 49%,
+      var(--color-oak) 86%,
       transparent 100%
     );
 }
@@ -116,7 +115,7 @@ html {
 .gold-rule {
   border: none;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-gold-pale) 30%, var(--color-gold) 50%, var(--color-gold-pale) 70%, transparent);
+  background: linear-gradient(90deg, transparent, var(--color-gold-pale) 32%, var(--color-gold) 50%, var(--color-gold-pale) 68%, transparent);
   margin: 2.5rem auto;
   max-width: 200px;
 }
@@ -129,8 +128,8 @@ html {
 .parchment-bg {
   background-color: var(--color-parchment);
   background-image:
-    radial-gradient(ellipse at 20% 50%, rgba(197, 150, 12, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 50%, rgba(107, 29, 41, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 18% 45%, rgba(181, 138, 60, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 82% 55%, rgba(62, 90, 67, 0.04) 0%, transparent 50%),
     url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.015'/%3E%3C/svg%3E");
 }
 
@@ -138,24 +137,24 @@ html {
 .forest-bg {
   background-color: var(--color-forest-dark);
   background-image:
-    radial-gradient(ellipse at 30% 0%, rgba(27, 67, 50, 0.6) 0%, transparent 60%),
-    radial-gradient(ellipse at 70% 100%, rgba(197, 150, 12, 0.06) 0%, transparent 50%);
+    linear-gradient(180deg, rgba(34, 52, 40, 0.97) 0%, rgba(42, 33, 26, 0.97) 100%),
+    radial-gradient(ellipse at 25% 0%, rgba(107, 139, 92, 0.2) 0%, transparent 60%);
 }
 
 /* Dark oak background — warm and rich */
 .oak-bg {
   background-color: var(--color-oak-dark);
   background-image:
-    radial-gradient(ellipse at 30% 0%, rgba(74, 55, 40, 0.6) 0%, transparent 60%),
-    radial-gradient(ellipse at 70% 100%, rgba(197, 150, 12, 0.04) 0%, transparent 50%);
+    linear-gradient(180deg, rgba(42, 33, 26, 0.98) 0%, rgba(34, 52, 40, 0.96) 100%),
+    radial-gradient(ellipse at 70% 0%, rgba(181, 138, 60, 0.08) 0%, transparent 56%);
 }
 
 /* Manuscript / speech background — aged paper feel */
 .manuscript-bg {
-  background-color: #F5EDD6;
+  background-color: #EEE2C9;
   background-image:
-    radial-gradient(ellipse at 10% 20%, rgba(197, 150, 12, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 90% 80%, rgba(107, 29, 41, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 10% 20%, rgba(181, 138, 60, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 80%, rgba(62, 90, 67, 0.05) 0%, transparent 50%),
     url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
 }
 
@@ -166,23 +165,23 @@ html {
 .heritage-card {
   background: var(--color-cream);
   border: 1px solid var(--color-wheat);
-  box-shadow: 0 1px 4px rgba(46, 31, 20, 0.06);
+  box-shadow: 0 1px 3px rgba(31, 35, 32, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.25);
   transition: all 0.3s ease;
 }
 
 .heritage-card:hover {
-  box-shadow: 0 4px 20px rgba(46, 31, 20, 0.12);
+  box-shadow: 0 3px 12px rgba(31, 35, 32, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.25);
   border-color: var(--color-gold);
 }
 
 .dark-heritage-card {
-  background: rgba(250, 243, 224, 0.05);
-  border: 1px solid rgba(197, 150, 12, 0.15);
+  background: rgba(243, 233, 210, 0.06);
+  border: 1px solid rgba(181, 138, 60, 0.22);
 }
 
 .dark-heritage-card:hover {
-  background: rgba(250, 243, 224, 0.08);
-  border-color: rgba(197, 150, 12, 0.3);
+  background: rgba(243, 233, 210, 0.09);
+  border-color: rgba(181, 138, 60, 0.36);
 }
 
 /* Focus styles */
@@ -203,9 +202,8 @@ html {
   line-height: 0.75;
   padding-right: 12px;
   padding-top: 6px;
-  color: var(--color-burgundy);
+  color: var(--color-oak-light);
   font-weight: 700;
-  font-style: italic;
 }
 
 /* Speech/prose block for long-form text */
@@ -222,8 +220,7 @@ html {
 .speech-emphasis {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-style: italic;
-  color: var(--color-burgundy);
+  color: var(--color-burgundy-dark);
   font-size: 1.2em;
   line-height: 1.5;
 }
@@ -232,7 +229,6 @@ html {
 .pull-quote {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-style: italic;
   color: var(--color-burgundy-dark);
   font-size: 1.5em;
   line-height: 1.35;
@@ -249,7 +245,7 @@ html {
   font-family: var(--font-accent);
   font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.2em;
   color: var(--color-gold);
 }
 
@@ -260,10 +256,10 @@ html {
 /* Subtle heraldic cross-hatch pattern for dark sections */
 .heraldic-pattern {
   background-image:
-    linear-gradient(45deg, rgba(197, 150, 12, 0.02) 25%, transparent 25%),
-    linear-gradient(-45deg, rgba(197, 150, 12, 0.02) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, rgba(197, 150, 12, 0.02) 75%),
-    linear-gradient(-45deg, transparent 75%, rgba(197, 150, 12, 0.02) 75%);
-  background-size: 40px 40px;
-  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+    linear-gradient(45deg, rgba(181, 138, 60, 0.018) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(181, 138, 60, 0.018) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(181, 138, 60, 0.018) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(181, 138, 60, 0.018) 75%);
+  background-size: 48px 48px;
+  background-position: 0 0, 0 24px, 24px -24px, -24px 0px;
 }

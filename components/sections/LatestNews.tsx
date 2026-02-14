@@ -30,7 +30,7 @@ export default function LatestNews() {
                 className="block h-full"
               >
                 <Card className="h-full flex flex-col group cursor-pointer">
-                  <h3 className="font-heading text-lg font-bold italic text-charcoal mb-3 group-hover:text-burgundy transition-colors">
+                  <h3 className="font-heading text-lg font-semibold text-charcoal mb-3 group-hover:text-burgundy transition-colors">
                     {article.title}
                   </h3>
 
@@ -48,7 +48,7 @@ export default function LatestNews() {
                       })}
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="italic">{article.author}</span>
+                      <span>{article.author}</span>
                       <ExternalLink size={14} className="text-burgundy" />
                     </div>
                   </div>

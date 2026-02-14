@@ -28,7 +28,7 @@ export default function PolicyPillars() {
                       size={24}
                     />
                   </div>
-                  <h3 className="font-heading text-xl font-bold italic text-charcoal mb-3 group-hover:text-burgundy transition-colors">
+                  <h3 className="font-heading text-xl font-semibold text-charcoal mb-3 group-hover:text-burgundy transition-colors">
                     {policy.title}
                   </h3>
                 </Card>

@@ -23,10 +23,10 @@ export default function LoweSpeech() {
               />
             </div>
             <p className="section-label mb-4">Launch Address</p>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold italic text-charcoal mb-3">
+            <h2 className="font-heading text-3xl md:text-4xl font-semibold text-charcoal mb-3">
               An Important Announcement
             </h2>
-            <p className="font-accent text-lg text-oak-light italic">from Rupert Lowe, MP for Great Yarmouth</p>
+            <p className="font-accent text-lg text-oak-light tracking-[0.03em]">from Rupert Lowe, MP for Great Yarmouth</p>
             <div className="heritage-line w-24 mx-auto mt-6" />
           </div>
         </ScrollReveal>
@@ -322,7 +322,7 @@ export default function LoweSpeech() {
         {/* Signature */}
         <ScrollReveal delay={0.1}>
           <div className="mt-12 pt-8 border-t border-gold-pale/40">
-            <p className="font-heading text-2xl font-bold italic text-charcoal">Rupert Lowe</p>
+            <p className="font-heading text-2xl font-semibold text-charcoal">Rupert Lowe</p>
             <p className="text-oak-light font-body text-sm mt-1">Member of Parliament for Great Yarmouth</p>
           </div>
         </ScrollReveal>

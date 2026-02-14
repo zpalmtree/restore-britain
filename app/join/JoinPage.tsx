@@ -51,7 +51,7 @@ export default function JoinPage() {
             <div>
               <ScrollReveal>
                 <span className="text-gold font-accent text-lg italic">Why Join</span>
-                <h2 className="font-heading text-3xl md:text-4xl font-bold italic text-forest-dark mt-2 mb-4">
+                <h2 className="font-heading text-3xl md:text-4xl font-bold text-forest-dark mt-2 mb-4">
                   An Entirely New Way of Doing Politics
                 </h2>
                 <div className="heritage-line w-16 mb-8" />
@@ -71,7 +71,7 @@ export default function JoinPage() {
                         <benefit.icon className="text-burgundy" size={18} />
                       </div>
                       <div>
-                        <h3 className="font-heading font-bold italic text-forest-dark mb-1">
+                        <h3 className="font-heading font-bold text-forest-dark mb-1">
                           {benefit.title}
                         </h3>
                         <p className="text-oak-light font-body text-sm">
@@ -91,7 +91,7 @@ export default function JoinPage() {
                       <Crown className="text-gold" size={22} />
                     </div>
                     <div>
-                      <h3 className="font-heading text-lg font-bold italic text-cream mb-2">The Cromwell Club</h3>
+                      <h3 className="font-heading text-lg font-bold text-cream mb-2">The Cromwell Club</h3>
                       <p className="text-cream/60 font-body text-sm leading-relaxed">
                         For an annual donation of &pound;2,500 or over, join the exclusive Cromwell Club.
                       </p>
@@ -104,7 +104,7 @@ export default function JoinPage() {
             {/* Signup Form */}
             <ScrollReveal direction="right">
               <Card className="p-8 md:p-10" hover={false}>
-                <h3 className="font-heading text-2xl font-bold italic text-forest-dark mb-2">
+                <h3 className="font-heading text-2xl font-bold text-forest-dark mb-2">
                   Become a Member
                 </h3>
                 <p className="text-oak-light font-body text-sm mb-2">

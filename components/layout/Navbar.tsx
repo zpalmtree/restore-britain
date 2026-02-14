@@ -40,8 +40,8 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-oak-dark/97 backdrop-blur-sm shadow-lg shadow-black/10 border-b border-gold/20'
-            : 'bg-transparent'
+            ? 'bg-oak-dark/98 shadow-lg shadow-black/10 border-b border-gold/25'
+            : 'bg-oak-dark/90 border-b border-gold/10'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,7 +64,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-cream/80 hover:text-gold px-3 py-2 text-sm font-body transition-colors"
+                  className="text-cream/90 hover:text-gold px-3 py-2 text-sm font-body tracking-[0.05em] transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -126,7 +126,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="text-cream text-xl font-heading italic hover:text-gold transition-colors"
+                    className="text-cream text-xl font-heading hover:text-gold transition-colors"
                   >
                     {link.label}
                   </Link>

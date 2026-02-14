@@ -48,7 +48,7 @@ export default function PoliciesPage() {
                         <div className="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center shrink-0">
                           <policy.icon className="text-oak" size={24} />
                         </div>
-                        <h3 className="font-heading text-xl font-bold italic text-charcoal flex-1">
+                        <h3 className="font-heading text-xl font-bold text-charcoal flex-1">
                           {policy.title}
                         </h3>
                         <span className="text-sm font-body text-stone mr-2 hidden sm:inline">
@@ -99,7 +99,7 @@ export default function PoliciesPage() {
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
             <span className="text-gold/60 font-accent text-2xl">&#10013;</span>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold italic text-cream mt-4 mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-cream mt-4 mb-6">
               Shape the Future
             </h2>
             <p className="text-cream/60 font-body text-lg mb-10">

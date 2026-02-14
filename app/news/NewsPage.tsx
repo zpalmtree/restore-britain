@@ -27,7 +27,7 @@ export default function NewsPage() {
                   className="block h-full"
                 >
                   <Card className="h-full flex flex-col group cursor-pointer">
-                    <h3 className="font-heading text-lg font-bold italic text-forest-dark mb-3 group-hover:text-burgundy transition-colors">
+                    <h3 className="font-heading text-lg font-bold text-forest-dark mb-3 group-hover:text-burgundy transition-colors">
                       {article.title}
                     </h3>
 
