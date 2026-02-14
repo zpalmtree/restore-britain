@@ -128,7 +128,7 @@ export default function Footer() {
                   Follow Us
                 </h3>
                 <a
-                  href="https://x.com/RestoreBritain"
+                  href="https://x.com/RestoreBritain_"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-body hover:text-gold transition-colors"
