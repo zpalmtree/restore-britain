@@ -33,7 +33,7 @@ export default function LoweSpeech() {
 
         {/* ─── PART 1: The Decision ─── */}
         <ScrollReveal delay={0.1}>
-          <div className="prose-speech font-body text-charcoal/90 text-base md:text-lg">
+          <div className="prose-speech font-body text-charcoal/90 text-[1.05rem] md:text-[1.15rem]">
             <p className="drop-cap">I have thought long and hard on what I am about to say to you.</p>
 
             <p>And I have come to a stark conclusion. There is simply no other way. This is the only choice.</p>
@@ -58,7 +58,7 @@ export default function LoweSpeech() {
 
         {/* ─── PART 2: The Rape Gangs Inquiry ─── */}
         <ScrollReveal delay={0.05}>
-          <div className="prose-speech font-body text-charcoal/90 text-base md:text-lg">
+          <div className="prose-speech font-body text-charcoal/90 text-[1.05rem] md:text-[1.15rem]">
             <p>And nothing &mdash; nothing &mdash; has shaped my thinking more than our crowdfunded, independent inquiry into the Pakistani Muslim rape gangs.</p>
 
             <p>An inquiry that should never have had to exist. An inquiry that I created only because the political system itself would not act. That inquiry has been the most sobering experience of my public life.</p>
@@ -85,7 +85,7 @@ export default function LoweSpeech() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.05}>
-          <div className="prose-speech font-body text-charcoal/90 text-base md:text-lg">
+          <div className="prose-speech font-body text-charcoal/90 text-[1.05rem] md:text-[1.15rem]">
             <p>They can call me islamophobic, racist or whatever else.</p>
 
             <p>Let me be abundantly clear with you all tonight.</p>
@@ -100,7 +100,7 @@ export default function LoweSpeech() {
 
         {/* ─── PART 3: The System Is Broken ─── */}
         <ScrollReveal delay={0.05}>
-          <div className="prose-speech font-body text-charcoal/90 text-base md:text-lg">
+          <div className="prose-speech font-body text-charcoal/90 text-[1.05rem] md:text-[1.15rem]">
             <p>I reached a point &mdash; sitting through evidence, listening to survivors, reading documents that should make every public servant hang their head in shame &mdash; and it became impossible to ignore the bigger truth.</p>
 
             <p>The problem is not confined to one department. It is not confined to one policy area. It is not confined to one political party.</p>
@@ -127,7 +127,7 @@ export default function LoweSpeech() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.05}>
-          <div className="prose-speech font-body text-charcoal/90 text-base md:text-lg">
+          <div className="prose-speech font-body text-charcoal/90 text-[1.05rem] md:text-[1.15rem]">
             <p className="speech-emphasis">A restoration of courage.</p>
 
             <p className="speech-emphasis">A restoration of responsibility.</p>
@@ -150,7 +150,7 @@ export default function LoweSpeech() {
 
         {/* ─── PART 4: Immigration ─── */}
         <ScrollReveal delay={0.05}>
-          <div className="prose-speech font-body text-charcoal/90 text-base md:text-lg">
+          <div className="prose-speech font-body text-charcoal/90 text-[1.05rem] md:text-[1.15rem]">
             <p className="section-label !text-burgundy !text-sm mb-4 !tracking-[0.3em]">Immigration</p>
 
             <p>Restore Britain will not manage mass immigration. We will not just stop mass immigration.</p>
@@ -170,7 +170,7 @@ export default function LoweSpeech() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.05}>
-          <div className="prose-speech font-body text-charcoal/90 text-base md:text-lg">
+          <div className="prose-speech font-body text-charcoal/90 text-[1.05rem] md:text-[1.15rem]">
             <p>This is absolutely non-negotiable. Restore Britain would abolish the entire asylum system. No more asylum seekers. The scam WILL end.</p>
 
             <p>We will round up every third world criminal who has broken into our country, and we will remove them. Without compensation, without delay, without apology.</p>
@@ -197,7 +197,7 @@ export default function LoweSpeech() {
 
         {/* ─── PART 5: Welfare ─── */}
         <ScrollReveal delay={0.05}>
-          <div className="prose-speech font-body text-charcoal/90 text-base md:text-lg">
+          <div className="prose-speech font-body text-charcoal/90 text-[1.05rem] md:text-[1.15rem]">
             <p className="section-label !text-burgundy !text-sm mb-4 !tracking-[0.3em]">Welfare</p>
 
             <p>We must always protect British people who genuinely cannot work. That is our moral duty. But the current system has failed.</p>
@@ -216,7 +216,7 @@ export default function LoweSpeech() {
 
         {/* ─── PART 6: Economy ─── */}
         <ScrollReveal delay={0.05}>
-          <div className="prose-speech font-body text-charcoal/90 text-base md:text-lg">
+          <div className="prose-speech font-body text-charcoal/90 text-[1.05rem] md:text-[1.15rem]">
             <p className="section-label !text-burgundy !text-sm mb-4 !tracking-[0.3em]">The Economy</p>
 
             <p>Because Britain is strangling itself. Suffocating. Dying.</p>
@@ -237,7 +237,7 @@ export default function LoweSpeech() {
 
         {/* ─── PART 7: Culture & Christianity ─── */}
         <ScrollReveal delay={0.05}>
-          <div className="prose-speech font-body text-charcoal/90 text-base md:text-lg">
+          <div className="prose-speech font-body text-charcoal/90 text-[1.05rem] md:text-[1.15rem]">
             <p>This is a national restoration programme.</p>
 
             <p>Because the deeper problem in Britain is not only financial. It is cultural.</p>
@@ -255,7 +255,7 @@ export default function LoweSpeech() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.05}>
-          <div className="prose-speech font-body text-charcoal/90 text-base md:text-lg">
+          <div className="prose-speech font-body text-charcoal/90 text-[1.05rem] md:text-[1.15rem]">
             <p>With a shared culture. Shared history. Shared expectations.</p>
 
             <p>Restore Britain will openly recognise the Christian heritage that shaped this country&rsquo;s moral and civic foundations &mdash; responsibility, duty, restraint, forgiveness and fairness.</p>
@@ -276,7 +276,7 @@ export default function LoweSpeech() {
 
         {/* ─── PART 8: Closing ─── */}
         <ScrollReveal delay={0.05}>
-          <div className="prose-speech font-body text-charcoal/90 text-base md:text-lg">
+          <div className="prose-speech font-body text-charcoal/90 text-[1.05rem] md:text-[1.15rem]">
             <p>Restore Britain is not offering you a miracle cure. Our programme is serious and honest.</p>
 
             <p>It will require discipline. It will require courage. It will require patience.</p>
@@ -306,7 +306,7 @@ export default function LoweSpeech() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.05}>
-          <div className="prose-speech font-body text-charcoal/90 text-base md:text-lg">
+          <div className="prose-speech font-body text-charcoal/90 text-[1.05rem] md:text-[1.15rem]">
             <p>Recent polls have shown us on almost 10% even without a real party.</p>
 
             <p className="speech-emphasis">We now have one.</p>
