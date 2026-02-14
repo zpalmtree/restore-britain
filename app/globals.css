@@ -271,8 +271,8 @@ html {
 }
 
 .prose-speech p {
-  margin-bottom: 1.1em;
-  line-height: 1.9;
+  margin-bottom: 1em;
+  line-height: 1.6em;
 }
 
 .prose-speech p:last-child {
@@ -282,7 +282,7 @@ html {
 .speech-emphasis {
   font-family: var(--font-heading);
   font-weight: 700;
-  color: var(--color-burgundy-dark);
+  color: var(--color-forest-light);
   font-size: 1.2em;
   line-height: 1.5;
 }
@@ -290,7 +290,7 @@ html {
 .pull-quote {
   font-family: var(--font-heading);
   font-weight: 700;
-  color: var(--color-burgundy-dark);
+  color: var(--color-forest-light);
   font-size: 1.5em;
   line-height: 1.35;
   text-align: center;
